@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="291.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="291.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentFormController">
    <children>
       <GridPane prefHeight="107.0" prefWidth="561.0">
         <columnConstraints>
@@ -29,25 +29,25 @@
          <children>
             <Label text="Id" />
             <Label text="Name" GridPane.rowIndex="1" />
-            <Label textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <TextField editable="false" prefHeight="20.0" prefWidth="80.0" GridPane.columnIndex="1">
+            <Label fx:id="labelError" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="textFieldId" editable="false" prefHeight="20.0" prefWidth="80.0" GridPane.columnIndex="1">
                <padding>
                   <Insets bottom="5.0" />
                </padding>
             </TextField>
-            <TextField prefHeight="20.0" prefWidth="80.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="textFieldName" prefHeight="20.0" prefWidth="80.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets top="5.0" />
                </GridPane.margin>
             </TextField>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="done">
+                  <Button fx:id="btSave" mnemonicParsing="false" onAction="#onBtSaveAction" prefHeight="25.0" prefWidth="53.0" text="Save">
                      <HBox.margin>
                         <Insets left="5.0" top="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="cancel">
+                  <Button fx:id="btCancel" mnemonicParsing="false" onAction="#onBtCancelAction" text="Cancel">
                      <HBox.margin>
                         <Insets left="7.0" top="10.0" />
                      </HBox.margin>
